@@ -1,22 +1,22 @@
-## leavesweight
+## cherriesweight
 
-**IMPORTANT: leavesweight is a branch of paperweight, dedicated to providing more user-friendly development tools for LeavesMC. It is open source and follows the LGPL2.1 license.**
+**IMPORTANT: cherriesweight is a branch of paperweight, dedicated to providing more user-friendly development tools for CherriesMC. It is open source and follows the LGPL2.1 license.**
 
-`leavesweight` consists of only one Gradle plugins now:
-- `leavesweight-patcher`: Used to create Leaves, Lumina or other `leavesweight-patcher`-based forks
+`cherriesweight` consists of only one Gradle plugins now:
+- `cherriesweight-patcher`: Used to create Cherries or other `cherriesweight-patcher`-based forks
 
 ### How to use this for testing:
 
-- Install `leavesweight` to Maven Local:
+- Install `cherriesweight` to Maven Local:
 ```bash
 ./gradlew publishToMavenLocal
 ```
 - Add `mavenLocal()` for plugin resolution in your test project
   (see the [Gradle docs](https://docs.gradle.org/current/userguide/plugins.html#sec:custom_plugin_repositories) for more details)
-- Adjust the `leavesweight` version in your test project
-  - Local versions of `leavesweight` will use have the `-SNAPSHOT` suffix in the version from `gradle.properties` replaced by `-LOCAL-SNAPSHOT`
+- Adjust the `cherriesweight` version in your test project
+  - Local versions of `cherriesweight` will use have the `-SNAPSHOT` suffix in the version from `gradle.properties` replaced by `-LOCAL-SNAPSHOT`
 
-> Most output `leavesweight` creates goes into `<project-root>/.gradle/caches/paperweight`
+> Most output `cherriesweight` creates goes into `<project-root>/.gradle/caches/paperweight`
 >
 > (yeah, we use the same path as paperweight.)
 

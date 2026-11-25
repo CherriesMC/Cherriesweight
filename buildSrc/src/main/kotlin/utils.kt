@@ -15,10 +15,10 @@ fun Configuration.compatibilityAttributes(objects: ObjectFactory) {
 }
 
 fun GradlePluginDevelopmentExtension.setupPlugin(prefix: String, op: Action<PluginDeclaration>) {
-    plugins.register("leavesweight-$prefix") {
-        id = "org.leavesmc.leavesweight." + prefix
-        displayName = "leavesweight $prefix"
-        tags.set(listOf("leaves", "paper", "minecraft"))
+    plugins.register("cherriesweight-$prefix") {
+        id = "org.endlessmc.cherries.weight." + prefix
+        displayName = "cherriesweight $prefix"
+        tags.set(listOf("cherries", "paper", "minecraft"))
         op.execute(this)
     }
 }

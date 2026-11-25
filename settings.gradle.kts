@@ -2,8 +2,8 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-rootProject.name = "leavesweight"
+rootProject.name = "cherriesweight"
 
-include("leavesweight-core", "paperweight-lib", "leavesweight-userdev")
+include("cherriesweight-core", "paperweight-lib", "cherriesweight-userdev")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
