@@ -136,7 +136,7 @@ fun MavenPom.pomConfig() {
     licenses {
         license {
             name.set("LGPLv2.1")
-            url.set("$repoUrl/blob/master/license/LGPLv2.1.txt")
+            url.set("$repoUrl/blob/main/license/LGPLv2.1.txt")
             distribution.set("repo")
         }
     }
