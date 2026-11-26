@@ -100,17 +100,13 @@ val isSnapshot = project.version.toString().endsWith("-SNAPSHOT")
 
 publishing {
     repositories {
-        val url = if (isSnapshot) {
-            "https://repo.leavesmc.org/snapshots/"
-        } else {
-            "https://repo.leavesmc.org/releases/"
-        }
-
-        maven(url) {
-            name = "leaves"
-            credentials(PasswordCredentials::class) {
-                username = System.getenv("LEAVES_USERNAME")
-                password = System.getenv("LEAVES_PASSWORD")
+        maven(System.getenv("CHERRIES_MAVEN_URL") ?: "https://repo.endlessmc.org/") {
+            name = "cherries"
+            if (System.getenv("CHERRIES_MAVEN_USERNAME") != null) {
+                credentials(PasswordCredentials::class) {
+                    username = System.getenv("CHERRIES_MAVEN_USERNAME")
+                    password = System.getenv("CHERRIES_MAVEN_PASSWORD")
+                }
             }
         }
     }
